@@ -12,7 +12,7 @@ inherit base cmake-utils distutils-r1 eutils gnome2 toolchain-funcs ubuntu-versi
 
 UURL="mirror://ubuntu/pool/main/u/${PN}"
 URELEASE="trusty"
-UVER_PREFIX="+14.04.20140416"
+UVER_PREFIX="+14.04.20140423"
 
 DESCRIPTION="The Ubuntu Unity Desktop"
 HOMEPAGE="https://launchpad.net/unity"
@@ -137,6 +137,11 @@ src_prepare() {
 		-e 's:.*"stop", "unity-panel-service".*:        subprocess.call(["pkill -e unity-panel-service"], shell=True):' \
 		-e 's:.*"start", "unity-panel-service".*:        subprocess.call(["/usr/lib/unity/unity-panel-service"], shell=True):' \
 			-i tools/unity.cmake
+
+	# Don't kill -9 unity-panel-service when launched using PANEL_USE_LOCAL_SERVICE env variable #
+	#  It slows down the launch of unity-panel-service in lockscreen mode #
+	sed -e '/killall -9 unity-panel-service/,+1d' \
+		-i UnityCore/DBusIndicators.cpp
 }
 
 src_configure() {
@@ -217,6 +222,9 @@ src_install() {
 
 	exeinto /etc/X11/xinit/xinitrc.d/
 	doexe "${FILESDIR}/99unity-panel-service"
+
+	exeinto /usr/share/dbus-1/services/
+	doexe "${FILESDIR}/com.canonical.Unity.Panel.Service.LockScreen.service"
 }
 
 pkg_postinst() {
