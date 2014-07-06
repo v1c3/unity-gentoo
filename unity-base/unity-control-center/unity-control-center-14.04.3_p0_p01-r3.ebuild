@@ -9,8 +9,8 @@ GCONF_DEBUG="yes"
 inherit autotools base bzr eutils gnome2 ubuntu-versionator vala
 
 UURL="mirror://ubuntu/pool/main/u/${PN}"
-URELEASE="trusty"
-UVER_PREFIX="+14.04.20140410"
+URELEASE="trusty-updates"
+UVER_PREFIX="+14.04.20140604"
 
 DESCRIPTION="Unity Desktop Configuration Tool"
 HOMEPAGE="http://www.gnome.org/"
@@ -59,7 +59,6 @@ COMMON_DEPEND="
 	>=sys-power/upower-0.9.1
 	unity-base/displayconfig
 	unity-base/gnome-control-center-signon
-	unity-base/ubuntuone-control-panel
 	unity-base/unity-settings-daemon[colord?,policykit]
 	virtual/krb5
 	>=x11-libs/libnotify-0.7.3:0=
