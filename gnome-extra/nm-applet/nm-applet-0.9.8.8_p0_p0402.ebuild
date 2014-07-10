@@ -18,12 +18,12 @@ URELEASE="trusty-updates"
 DESCRIPTION="GNOME applet for NetworkManager"
 HOMEPAGE="http://projects.gnome.org/NetworkManager/"
 SRC_URI="${UURL}/${MY_P}.orig.tar.xz
-        ${UURL}/${MY_P}-${UVER}.debian.tar.gz"
+        ${UURL}/${MY_P}-${UVER}.debian.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="bluetooth gconf +introspection modemmanager systemd"
-#KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 RESTRICT="mirror"
 
 RDEPEND="
