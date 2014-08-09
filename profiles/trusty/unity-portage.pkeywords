@@ -4,6 +4,7 @@
 
 ## Other packages keyword unmasking ##
 ~app-admin/packagekit-base-0.8.15
+~dev-dotnet/libgdiplus-2.10.9
 dev-lang/python:3.4
 dev-lang/python-exec:2	# Need this as 'python3_4' is only puse.unmasked at ~keyword level
 ~dev-libs/atk-2.12.0
@@ -43,7 +44,7 @@ dev-qt/qtwidgets:5
 dev-qt/qtxml:5
 dev-qt/qtxmlpatterns:5
 ~dev-util/boost-build-1.53.0
-~dev-util/umockdev-0.7
+~dev-util/umockdev-0.8.2
 ~net-zope/zope-fixers-1.1.2
 ~net-zope/zope-interface-4.1.0
 ~net-libs/gnutls-3.3.4

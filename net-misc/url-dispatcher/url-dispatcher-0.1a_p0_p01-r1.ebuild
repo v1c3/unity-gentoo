@@ -7,8 +7,8 @@ EAPI=5
 inherit cmake-utils ubuntu-versionator
 
 UURL="mirror://ubuntu/pool/main/u/${PN}"
-URELEASE="trusty"
-UVER_PREFIX="+14.04.20140403"
+URELEASE="utopic"
+UVER_PREFIX="+14.10.20140724"
 
 DESCRIPTION="Service to allow sending of URLs and get handlers started, used by the Unity desktop"
 HOMEPAGE="https://launchpad.net/url-dispatcher"
@@ -16,14 +16,14 @@ SRC_URI="${UURL}/${MY_P}${UVER_PREFIX}.orig.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+#KEYWORDS="~amd64 ~x86"
 IUSE="test"
 RESTRICT="mirror"
 
 RDEPEND="dev-libs/libdbusmenu:="
 DEPEND="${RDEPEND}
 	dev-libs/glib:2
-	dev-libs/libupstart-app-launch
+	dev-libs/libubuntu-app-launch
 	sys-apps/dbus
 	test? ( dev-util/dbus-test-runner )"
 
