@@ -6,7 +6,7 @@ EAPI=4
 
 inherit eutils gnome2-utils ubuntu-versionator
 
-URELEASE="trusty"
+URELEASE="utopic"
 UVER_PREFIX="+14.04.20140130.3"
 UURL="http://archive.ubuntu.com/ubuntu/pool/universe/u"	# Mirrors are too unpredictable #
 
@@ -15,7 +15,7 @@ HOMEPAGE="https://launchpad.net/webapps-applications"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+#KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
@@ -31,21 +31,21 @@ setvar() {
 }
 ##setvar amazon			2.4.16daily13.06.20	0ubuntu1	# Collides with files from unity-base/webapps-base
 setvar amazoncloudreader	2.4.16+13.10.20130924.1	0ubuntu1
-setvar angrybirds		2.2
+##setvar angrybirds		2.2					# Dropped from upstream packaging
 setvar bbcnews			2.4.16+13.10.20130924.2	0ubuntu1
 setvar cnn-news			2.4.16+13.10.20130924.2	0ubuntu1
-setvar cuttherope		2.2
+##setvar cuttherope		2.2					# Dropped from upstream packaging
 setvar deezer			2.4.16+13.10.20130924.2	0ubuntu1
 setvar deviantart		2.4.16+13.10.20130926.1	0ubuntu1
 setvar facebookmessenger	2.4.16+14.04.20140217	0ubuntu1
-setvar gmail			2.4.16+14.04.20140409	0ubuntu1
-setvar googlecalendar		2.4.16+14.04.20140409	0ubuntu1
-setvar googledocs		2.4.16+14.04.20140411	0ubuntu1
+setvar gmail			2.4.16+14.10.20140623	0ubuntu1
+setvar googlecalendar		2.4.16+14.10.20140623	0ubuntu1
+setvar googledocs		2.4.16+14.10.20140623	0ubuntu1
 setvar googlenews		2.4.16+13.10.20130924.2	0ubuntu1
-setvar googleplus		2.4.17+14.04.20140409	0ubuntu1
+setvar googleplus		2.4.17+14.10.20140623	0ubuntu1
 setvar googleplusgames		2.4.16+13.10.20130924.2	0ubuntu1
 setvar grooveshark		2.4.16+13.10.20130924.2	0ubuntu1
-##setvar hulu-player		2.4.16daily13.06.20	0ubuntu1	# Corrupt tarball authored by upstream
+setvar hulu-player		2.4.16+13.10.20130924.2	0ubuntu1	# Corrupt tarball authored by upstream
 setvar lastfm-radio		2.4.16+13.10.20130924.2	0ubuntu1
 setvar launchpad		2.4.16+13.10.20130924.2	0ubuntu1
 setvar librefm			2.4.16+13.10.20130924.2	0ubuntu1
